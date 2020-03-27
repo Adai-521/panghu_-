@@ -1,0 +1,33 @@
+<view class="videoContainer">
+    <!-- 头部 -->
+        <view class="videoHeader">
+            <image src="/static/images/video/video.jpg" bindtap="chooseVideo"/>
+         <view class="search">
+             <input type="text" placeholder="光辉岁月" placeholder-class="placeholder"/>
+         </view>
+           <image src="/static/images/logo.png"/>
+             
+        </view> 
+    <!-- 导航 -->
+    <scroll-view class="videoNav" scroll-x>
+        <view class="navItem {{navId === item.id?'active':''}}"
+         wx:for="{{videoGroupList}}" 
+         wx:key="{{index}}"
+         bindtap="changeNavId"
+         data-Navid="{{item.id}}"
+         >
+            <view>
+               {{item.name}}
+            </view>
+        </view>
+    </scroll-view>
+
+    <!--视频列表区 -->
+    <scroll-view >
+        <view class="videoItem" wx:for="{{videoList}}" wx:key="{{index}}">
+            <video src="{{item.data.urlInfo.url}}"></video>
+        </view>
+          
+    </scroll-view>
+      
+</view>

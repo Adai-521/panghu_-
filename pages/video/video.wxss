@@ -1,0 +1,44 @@
+.videoHeader{
+    display: flex;
+    height: 60rpx;
+    padding: 10rpx;
+}
+.videoHeader image{
+    width: 60rpx;
+    height: 60rpx;
+}
+.videoHeader .search{
+    border:1rpx solid #333;
+    flex:1;
+    margin: 0 20rpx;
+    border-radius: 10rpx;
+    height: 100%;
+}
+.videoHeader .search input{
+    width: 100%;
+    height: 100%;
+}
+.videoHeader .search .placeholder{
+    text-align: center;
+}
+
+
+/* 导航区 */
+.videoNav{
+   width: 100%;
+   white-space: nowrap;
+   margin: 0 20rpx;
+}
+.videoNav .navItem{
+   display: inline-block;
+   margin-left: 40rpx;
+   max-width: 200rpx;
+}
+.videoNav .navItem.active{
+    border-bottom: 1rpx solid #d43c33;
+ }
+.videoNav .navItem>view{
+  height: 40rpx;
+  font-size: 30rpx;
+  padding: 10rpx;
+ }
